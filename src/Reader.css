@@ -1,0 +1,6 @@
+.Reader {
+  writing-mode: vertical-rl;
+  margin: 4em;
+  white-space: pre-wrap;
+  line-height: 1.7em;
+}
