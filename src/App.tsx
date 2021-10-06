@@ -11,7 +11,6 @@ function App() {
     const elements = new DOMParser().parseFromString(bodyText, "text/html").querySelectorAll("#novel_honbun > p");
 
     const text = Array.from(elements).map(element => element.textContent ?? '').join('\n');
-    console.log(text);
     setText(text ?? '取得失敗');
   }
 
