@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import { css } from '@linaria/core';
+import React, { useState } from 'react';
 import Reader from './Reader';
 
 function App() {
@@ -19,8 +19,13 @@ function App() {
     if(event) setUrl(event.target?.value);
   }
 
+  const app = css`
+    font-family: 'Shippori Mincho', serif;
+    font-size: 20px;
+  `;
+
   return (
-    <div className="App">
+    <div className={app}>
       <header className="App-header">
         <h1>webkansu</h1>
         <input value={url} onChange={handleChangeUrlInput} type="text"></input>
