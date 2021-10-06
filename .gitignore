@@ -11,6 +11,9 @@
 # production
 /build
 
+# cache
+/src/.linaria_cache
+
 # misc
 .DS_Store
 .env.local
