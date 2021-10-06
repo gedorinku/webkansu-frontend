@@ -38,7 +38,7 @@ function Reader(props: ReaderProps) {
       <button onClick={() => setCurrentPage(page => page + 1)}>&lt;</button>
       <button onClick={() => setCurrentPage(page => page - 1)}>&gt;</button>
       <div className={pageContainer}>
-        <div className={page} style={{ 'right': `-${currentPage * lineHeight * numberOfLines}em` }}>
+        <div className={page} style={{ 'transform': `translateX(${currentPage * lineHeight * numberOfLines}em)` }}>
           {props.text}
         </div>
       </div>
