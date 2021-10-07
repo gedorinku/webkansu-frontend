@@ -1,6 +1,17 @@
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Registration from './pages/Registration';
+import Library from './pages/Library';
+import Login from './pages/Login';
 import { css } from '@linaria/core';
-import React, { useState } from 'react';
-import Reader from './Reader';
+import AuthProvider from './contexts/AuthProvider';
+import { CookiesProvider } from 'react-cookie';
+import PrivateRoute from './components/PrivateRoute';
 
 export const globals = css`
   :global() {
@@ -10,25 +21,28 @@ export const globals = css`
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-
-  const handleChangeUrlInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if(event) setUrl(event.target?.value);
   }
+`;
 
-  const app = css`
-    font-family: 'Shippori Mincho', serif;
-    font-size: 20px;
-  `;
-
+function App() {
   return (
-    <div className={app}>
-      <header className="App-header">
-        <h1>webkansu</h1>
-        <input value={url} onChange={handleChangeUrlInput} type="text"></input>
-        <button onClick={handleClickFetchButton}>GET</button>
-      </header>
-      <Reader text={text}></Reader>
-    </div>
+    <Router>
+      <Switch>
+        <CookiesProvider>
+          <AuthProvider>
+            <Route path="/registration">
+              <Registration />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <PrivateRoute path="/">
+              <Library />
+            </PrivateRoute>
+          </AuthProvider>
+        </CookiesProvider>
+      </Switch>
+    </Router>
   );
 }
 
