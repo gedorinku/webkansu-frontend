@@ -2,17 +2,14 @@ import { css } from '@linaria/core';
 import React, { useState } from 'react';
 import Reader from './Reader';
 
-function App() {
-  const [url, setUrl] = useState<string>('');
-  const [text, setText] = useState<string>('');
-
-  const handleClickFetchButton = async () => {
-    const bodyText = await (await fetch(url)).text();
-    const elements = new DOMParser().parseFromString(bodyText, "text/html").querySelectorAll("#novel_honbun > p");
-
-    const text = Array.from(elements).map(element => element.textContent ?? '').join('\n');
-    setText(text ?? '取得失敗');
-  }
+export const globals = css`
+  :global() {
+    body {
+      margin: 0;
+      font-family: 'Shippori Mincho', serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
   const handleChangeUrlInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     if(event) setUrl(event.target?.value);
