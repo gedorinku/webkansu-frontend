@@ -6,6 +6,8 @@
   "author": "Daisuke Yamamura <mucho613@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^16.11.1",
+    "ts-node": "^10.3.0",
     "typescript": "^4.4.4",
     "webpack": "^5.58.2"
   }
