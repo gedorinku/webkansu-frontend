@@ -5,6 +5,4 @@
 /**
  * 小説が掲載されているサービスを表す。
  */
-export enum NovelProvider {
-    NAROU = 'narou',
-}
+export type NovelProvider = 'narou';
