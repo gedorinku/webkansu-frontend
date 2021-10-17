@@ -4,10 +4,12 @@
     "module": "commonjs",
     "sourceMap": true,
     "strict": true,
+    "outDir": "build",
     "noUncheckedIndexedAccess": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-  }
+  },
+  "include": ["src"]
 }
