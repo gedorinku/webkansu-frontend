@@ -1,0 +1,8 @@
+{
+  "name": "webkansu-frontend",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:gedorinku/webkansu-frontend.git",
+  "author": "Daisuke Yamamura <mucho613@gmail.com>",
+  "license": "MIT"
+}

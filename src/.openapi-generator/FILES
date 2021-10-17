@@ -1,0 +1,16 @@
+.openapi-generator-ignore
+apis/DefaultApi.ts
+apis/index.ts
+index.ts
+models/Bookmark.ts
+models/CreateBookmarkRequestBody.ts
+models/CreateNovelRequestBody.ts
+models/GetCurrentUserResponseBody.ts
+models/Novel.ts
+models/NovelProvider.ts
+models/RegisterUserRequestBody.ts
+models/RegisterUserResponseBody.ts
+models/RegisterUserResponseBodyData.ts
+models/SignInRequestBody.ts
+models/index.ts
+runtime.ts
