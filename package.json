@@ -6,7 +6,8 @@
   "author": "Daisuke Yamamura <mucho613@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "api-generate": "openapi --input ./src/api/openapi.yml --output ./src/api/"
+    "build": "tsc",
+    "generate-api": "openapi --input ./src/api/openapi.yml --output ./src/api/ --useUnionTypes"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.159",

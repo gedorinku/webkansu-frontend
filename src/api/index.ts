@@ -9,7 +9,7 @@ export type { CreateBookmarkRequestBody } from './models/CreateBookmarkRequestBo
 export type { CreateNovelRequestBody } from './models/CreateNovelRequestBody';
 export type { GetCurrentUserResponseBody } from './models/GetCurrentUserResponseBody';
 export type { Novel } from './models/Novel';
-export { NovelProvider } from './models/NovelProvider';
+export type { NovelProvider } from './models/NovelProvider';
 export type { RegisterUserRequestBody } from './models/RegisterUserRequestBody';
 export type { RegisterUserResponseBody } from './models/RegisterUserResponseBody';
 export type { SignInRequestBody } from './models/SignInRequestBody';
