@@ -5,8 +5,12 @@
   "repository": "git@github.com:gedorinku/webkansu-frontend.git",
   "author": "Daisuke Yamamura <mucho613@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "api-generate": "openapi --input ./src/api/openapi.yml --output ./src/api/"
+  },
   "devDependencies": {
     "@types/node": "^16.11.1",
+    "openapi-typescript-codegen": "^0.10.0-alpha",
     "ts-node": "^10.3.0",
     "typescript": "^4.4.4",
     "webpack": "^5.58.2"
