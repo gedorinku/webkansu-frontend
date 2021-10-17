@@ -2,9 +2,5 @@
   "manifest_version": 3,
   "name": "webkansu",
   "version": "0.0.0.1",
-  "description": "小説投稿サイトの機能を拡張します。",
-  "action": {
-    "default_title": "webkansu のライブラリ画面を開きます",
-    "default_popup": "./popup/build/index.html"
-  }
+  "description": "小説投稿サイトの機能を拡張します。"
 }
