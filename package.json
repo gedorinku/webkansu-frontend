@@ -9,6 +9,7 @@
     "api-generate": "openapi --input ./src/api/openapi.yml --output ./src/api/"
   },
   "devDependencies": {
+    "@types/chrome": "^0.0.159",
     "@types/node": "^16.11.1",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "eslint": "^5.16.0",
