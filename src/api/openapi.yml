@@ -119,7 +119,7 @@ paths:
         - in: query
           name: provider
           required: true
-          schema: 
+          schema:
             $ref: "#/components/schemas/NovelProvider"
         - in: query
           name: slug
