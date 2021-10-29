@@ -1,4 +1,4 @@
-import { Service, SignInRequestBody } from '../api/index';
+import { Service, SignInRequestBody } from '../../api/index';
 
 (async () => {
   const requestBody: SignInRequestBody = {
