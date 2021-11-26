@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc --project ./src/background",
-    "generate-api": "openapi --input ./src/background/src/api/openapi.yml --output ./src/background/src/api/ --useUnionTypes"
+    "generate-api": "openapi --input ./src/background/api/openapi.yml --output ./src/background/api/ --useUnionTypes"
   },
   "dependencies": {
     "webpack": "^5.58.2"
