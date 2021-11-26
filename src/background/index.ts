@@ -1,4 +1,4 @@
-import { Service, SignInRequestBody } from "./api";
+import { ServiceService, SignInRequestBody } from './api';
 
 (async () => {
   const requestBody: SignInRequestBody = {
@@ -6,6 +6,6 @@ import { Service, SignInRequestBody } from "./api";
     password: '123456',
   };
 
-  const response = await Service.signIn(requestBody);
+  const response = await ServiceService.signIn(requestBody);
   console.log(response);
 })();

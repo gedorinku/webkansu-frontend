@@ -2,6 +2,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export { ApiError } from './core/ApiError';
+export { CancelablePromise } from './core/CancelablePromise';
 export { OpenAPI } from './core/OpenAPI';
 
 export type { Bookmark } from './models/Bookmark';
@@ -15,4 +16,4 @@ export type { RegisterUserResponseBody } from './models/RegisterUserResponseBody
 export type { SignInRequestBody } from './models/SignInRequestBody';
 export type { SignInResponseBody } from './models/SignInResponseBody';
 
-export { Service } from './services/Service';
+export { ServiceService } from './services/ServiceService';

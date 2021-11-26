@@ -11,9 +11,10 @@ import type { RegisterUserRequestBody } from '../models/RegisterUserRequestBody'
 import type { RegisterUserResponseBody } from '../models/RegisterUserResponseBody';
 import type { SignInRequestBody } from '../models/SignInRequestBody';
 import type { SignInResponseBody } from '../models/SignInResponseBody';
+import type { CancelablePromise } from '../core/CancelablePromise';
 import { request as __request } from '../core/request';
 
-export class Service {
+export class ServiceService {
 
     /**
      * ユーザー登録をする。
@@ -21,16 +22,15 @@ export class Service {
      * @returns RegisterUserResponseBody この時のレスポンスヘッダーをリクエストヘッダーに含めると、認証が必要なリクエストができる。
      * @throws ApiError
      */
-    public static async registerUser(
+    public static registerUser(
         requestBody: RegisterUserRequestBody,
-    ): Promise<RegisterUserResponseBody> {
-        const result = await __request({
+    ): CancelablePromise<RegisterUserResponseBody> {
+        return __request({
             method: 'POST',
             path: `/api/auth`,
             body: requestBody,
             mediaType: 'application/json',
         });
-        return result.body;
     }
 
     /**
@@ -39,16 +39,15 @@ export class Service {
      * @returns SignInResponseBody この時のレスポンスヘッダーをリクエストヘッダーに含めると、認証が必要なリクエストができる。
      * @throws ApiError
      */
-    public static async signIn(
+    public static signIn(
         requestBody: SignInRequestBody,
-    ): Promise<SignInResponseBody> {
-        const result = await __request({
+    ): CancelablePromise<SignInResponseBody> {
+        return __request({
             method: 'POST',
             path: `/api/auth/sign_in`,
             body: requestBody,
             mediaType: 'application/json',
         });
-        return result.body;
     }
 
     /**
@@ -56,12 +55,11 @@ export class Service {
      * @returns GetCurrentUserResponseBody
      * @throws ApiError
      */
-    public static async getCurrentUser(): Promise<GetCurrentUserResponseBody> {
-        const result = await __request({
+    public static getCurrentUser(): CancelablePromise<GetCurrentUserResponseBody> {
+        return __request({
             method: 'GET',
             path: `/api/user`,
         });
-        return result.body;
     }
 
     /**
@@ -69,12 +67,11 @@ export class Service {
      * @returns Novel
      * @throws ApiError
      */
-    public static async listNovels(): Promise<Array<Novel>> {
-        const result = await __request({
+    public static listNovels(): CancelablePromise<Array<Novel>> {
+        return __request({
             method: 'GET',
             path: `/api/user/novels`,
         });
-        return result.body;
     }
 
     /**
@@ -83,16 +80,15 @@ export class Service {
      * @returns Novel
      * @throws ApiError
      */
-    public static async createNovel(
+    public static createNovel(
         requestBody: CreateNovelRequestBody,
-    ): Promise<Novel> {
-        const result = await __request({
+    ): CancelablePromise<Novel> {
+        return __request({
             method: 'POST',
             path: `/api/user/novels`,
             body: requestBody,
             mediaType: 'application/json',
         });
-        return result.body;
     }
 
     /**
@@ -102,11 +98,11 @@ export class Service {
      * @returns Novel
      * @throws ApiError
      */
-    public static async getNovelBySlug(
+    public static getNovelBySlug(
         provider: NovelProvider,
         slug: string,
-    ): Promise<Novel> {
-        const result = await __request({
+    ): CancelablePromise<Novel> {
+        return __request({
             method: 'GET',
             path: `/api/user/novels/find`,
             query: {
@@ -114,7 +110,6 @@ export class Service {
                 'slug': slug,
             },
         });
-        return result.body;
     }
 
     /**
@@ -124,17 +119,16 @@ export class Service {
      * @returns Bookmark
      * @throws ApiError
      */
-    public static async createBookmark(
+    public static createBookmark(
         id: number,
         requestBody: CreateBookmarkRequestBody,
-    ): Promise<Bookmark> {
-        const result = await __request({
+    ): CancelablePromise<Bookmark> {
+        return __request({
             method: 'POST',
             path: `/api/user/novels/${id}/bookmark`,
             body: requestBody,
             mediaType: 'application/json',
         });
-        return result.body;
     }
 
 }
