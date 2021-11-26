@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc --project ./src/background",
-    "generate-api": "openapi --input ./src/api/openapi.yml --output ./src/api/ --useUnionTypes"
+    "generate-api": "openapi --input ./src/background/src/api/openapi.yml --output ./src/background/src/api/ --useUnionTypes"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.159",
