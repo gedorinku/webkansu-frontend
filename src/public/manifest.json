@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "webkansu",
+  "version": "0.0.0.1",
+  "description": "小説投稿サイトの機能を拡張します。",
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "popup.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ncode.syosetu.com/*"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ]
+}

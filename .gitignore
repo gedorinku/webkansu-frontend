@@ -9,7 +9,7 @@ node_modules
 /coverage
 
 # production
-build
+dist
 
 # cache
 /src/.linaria_cache
